@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff3097fd"
+        android:gravity="center_vertical"
+        android:id="@+id/ll_bar"
+        android:orientation="horizontal">
+
+        <EditText
+
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg_selector"
+            android:clickable="true"
+            android:drawableLeft="@drawable/search_left"
+            android:drawablePadding="5dp"
+            android:gravity="left|center_vertical"
+            android:hint="全网搜索"
+            android:textColor="@drawable/search_textcolor_selector" />
+
+
+        <ImageView
+            android:id="@+id/iv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/voice_empty" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="搜索"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_below="@+id/ll_bar"
+        android:id="@+id/lv_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/youkumenu"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
